@@ -4,6 +4,6 @@ module.exports = {
     'eslint',
     'npx jest --bail --findRelatedTests',
   ],
-  '**/*.ts?(x)': () => 'npm run build-types',
+  '**/*.ts?(x)': () => 'npm run build:types',
   '*.json': ['prettier --write'],
 };

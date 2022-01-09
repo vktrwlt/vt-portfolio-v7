@@ -14,7 +14,32 @@
         "singleQuote": true
       }
     ],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "import/newline-after-import": ["warn", { "count": 1 }],
+    "import/order": [
+      "warn",
+      {
+        "groups": [
+          "builtin",
+          ["external", "internal"],
+          "parent",
+          ["sibling", "index"]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "never",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   },
   "overrides": [
     // Configuration for TypeScript files

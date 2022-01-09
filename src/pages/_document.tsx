@@ -1,4 +1,5 @@
 /* eslint-disable react/no-danger */
+import { extractCritical } from '@emotion/server';
 import Document, {
   Html,
   Head,
@@ -6,7 +7,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
-import { extractCritical } from '@emotion/server';
+import { GoogleFonts } from 'nextjs-google-fonts/GoogleFonts';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<{
@@ -33,7 +34,7 @@ export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
       <Html lang='en'>
-        <Head />
+        <Head> {GoogleFonts()} </Head>
         <body>
           <Main />
           <NextScript />

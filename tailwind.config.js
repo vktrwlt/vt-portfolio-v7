@@ -2,7 +2,35 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      sans: ['Mulish', 'system-ui'],
+    },
+    fontSize: {
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+    },
+    screens: {
+      xs: '375px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xld: { max: '1439px' },
+      xl: '1440px',
+      '2xl': '1680px',
+      '3xl': '1920px',
+    },
     extend: {
+      colors: {
+        'brand-blue': '#0856c1',
+      },
       spacing: {
         xs: '8px',
         sm: '16px',
@@ -10,18 +38,6 @@ module.exports = {
         lg: '48px',
         xl: '96px',
         '2xl': '192px',
-      },
-      colors: {
-        gray: {
-          50: '#F8F8FF',
-        },
-        blue: {
-          DEFAULT: '#00cfff',
-          600: '#007cb9',
-        },
-        red: {
-          500: '#8f2800',
-        },
       },
       transformOrigin: {
         0: '0%',

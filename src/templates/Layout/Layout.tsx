@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Header } from '@/templates/Layout/Header';
 import { Footer } from '@/templates/Layout/Footer';
+import { Header } from '@/templates/Layout/Header';
 import tw, { styled, css, theme } from 'twin.macro';
 
 export interface LayoutProps {
@@ -8,10 +8,10 @@ export interface LayoutProps {
 }
 
 const StyledLayout = styled.div`
-  ${tw`flex flex-col min-h-screen overflow-x-hidden bg-white`}
+  ${tw`flex flex-col h-screen bg-white `}
 `;
 const ContentWrapper = styled.div`
-  ${tw`flex-auto w-full mt-md`}
+  ${tw`flex-auto w-full mt-xl md:pt-sm`}
 `;
 
 export const Layout: FC<LayoutProps> = ({ children }) => {

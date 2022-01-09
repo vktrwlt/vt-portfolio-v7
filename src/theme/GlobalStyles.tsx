@@ -7,6 +7,9 @@ const customStyles = css`
     -webkit-tap-highlight-color: ${theme`colors.purple.500`};
     ${tw`antialiased`}
   }
+  /* * {
+    border: 1px solid red;
+  } */
 `;
 
 const GlobalStyles = () => (
