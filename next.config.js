@@ -1,12 +1,10 @@
 const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
 const { withGoogleFonts } = require('nextjs-google-fonts');
 
 const today = new Date();
 const year = today.getFullYear();
 module.exports = withPlugins(
   [
-    optimizedImages,
     [
       withGoogleFonts,
       {
