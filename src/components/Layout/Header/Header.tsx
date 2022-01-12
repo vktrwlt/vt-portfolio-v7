@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from '@/components/Container';
-import { Nav } from '@/templates/Layout/Header/Nav';
+import { Nav } from '@/components/Layout/Header/Nav';
 import tw, { styled, css, theme } from 'twin.macro';
 
 type StyledHeaderProps = {

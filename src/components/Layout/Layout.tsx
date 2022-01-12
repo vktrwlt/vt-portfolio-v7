@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Footer } from '@/templates/Layout/Footer';
-import { Header } from '@/templates/Layout/Header';
+import { Footer } from '@/components/Layout/Footer';
+import { Header } from '@/components/Layout/Header';
 import tw, { styled, css, theme } from 'twin.macro';
 
 export interface LayoutProps {

@@ -2,8 +2,8 @@ import { Button } from '@/components/Button';
 import { Card } from '@/components/Card';
 import { Container } from '@/components/Container';
 import { Heading } from '@/components/Heading';
+import { Layout } from '@/components/Layout';
 import { Hero } from '@/templates/Hero';
-import { Layout } from '@/templates/Layout';
 import { ProjectSection } from '@/templates/ProjectSection';
 import type { NextPage } from 'next';
 

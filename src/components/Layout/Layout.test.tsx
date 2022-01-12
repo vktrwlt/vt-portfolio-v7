@@ -1,9 +1,9 @@
-import { Footer } from './Footer';
 import { render, fireEvent } from '@/utils/test-utils';
+import { Layout } from './Layout';
 
-describe('<Footer />', () => {
+describe('<Layout />', () => {
   it('should render without crashing', () => {
-    const { container } = render(<Footer>Footer</Footer>);
+    const { container } = render(<Layout>Layout</Layout>);
     expect(container).toBeInTheDocument();
   });
 });
