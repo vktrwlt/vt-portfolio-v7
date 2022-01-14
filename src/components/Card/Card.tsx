@@ -15,9 +15,42 @@ export interface CardProps extends CardBgProp {
 const bgColorVariants = {
   'bg-red-200': tw`bg-red-200`,
 };
-
+const StyledCardCTA = styled.span`
+  display: inline-block;
+  position: relative;
+  ${tw`text-black`}
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    ${tw`bg-black`}
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+`;
 const StyledCard = styled.article`
   ${tw`w-full mb-8 md:mb-0 md:w-1/2 md:p-4 lg:p-6 md:flex`}
+
+  &:hover {
+    ${StyledCardCTA} {
+      &:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+  &:focus {
+    ${StyledCardCTA} {
+      &:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
 `;
 
 const StyledCardInner = styled.a(({ bgColor }: CardBgProp) => [
@@ -27,28 +60,33 @@ const StyledCardInner = styled.a(({ bgColor }: CardBgProp) => [
 ]);
 
 const StyledCardBody = styled.div`
-  ${tw`p-8 lg:p-10 md:flex md:flex-col md:flex-1`}
+  ${tw`p-md lg:p-lg md:flex md:flex-col md:flex-1`}
 `;
+
 const StyledCardAction = styled.div`
-  ${tw`mt-auto`}
+  ${tw`flex text-lg font-bold mt-lg lg:mt-xl`}
 `;
 
 export const Card: FC<CardProps> = ({ title, body, bgColor, url }) => {
   return (
-    <StyledCard>
-      <Link href={url} passHref>
+    <Link href={url} passHref>
+      <StyledCard>
         <StyledCardInner bgColor={bgColor}>
           <StyledCardBody>
             <Heading as='h2' size='lg' tw='mb-sm'>
               {title}
             </Heading>
-            <p>{body}</p>
-            <StyledCardAction>
-              <div tw='mt-lg flex'>View Project</div>
-            </StyledCardAction>
+            <Heading as='h3' size='md' tw='font-normal'>
+              {body}
+            </Heading>
+            <div tw='mt-auto'>
+              <StyledCardAction>
+                <StyledCardCTA>View Project</StyledCardCTA>
+              </StyledCardAction>
+            </div>
           </StyledCardBody>
         </StyledCardInner>
-      </Link>
-    </StyledCard>
+      </StyledCard>
+    </Link>
   );
 };

@@ -11,7 +11,7 @@ const StyledProjectSection = styled.section`
 export const ProjectSection: FC = ({ children }) => {
   return (
     <Section>
-      <Heading as='h2' size='sm' tw='uppercase'>
+      <Heading as='h2' size='sm' tw='uppercase mb-md md:mb-0'>
         Featured Projects
       </Heading>
       <CardGroup>
