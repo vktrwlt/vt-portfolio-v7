@@ -6,7 +6,7 @@ export interface HeroProps {
 }
 
 const StyledHero = styled.div`
-  ${tw` `}
+  ${tw`mb-lg lg:mb-xl`}
 `;
 
 export const Hero: FC<HeroProps> = ({ children }) => {

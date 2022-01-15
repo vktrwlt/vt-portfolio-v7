@@ -21,7 +21,8 @@ module.exports = withPlugins(
     images: {
       disableStaticImages: true,
     },
-    env: {
+    publicRuntimeConfig: {
+      // Will be available on both server and client
       year: year,
     },
     eslint: {
